@@ -1,0 +1,15 @@
+GET http://localhost:3000/ 
+
+###
+POST http://localhost:3000
+Content-Type: application/json
+
+{
+    "name" : "Kapsu"
+    
+}
+
+
+###DELETE 
+
+DELETE http://localhost:3000
