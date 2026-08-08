@@ -3,6 +3,7 @@ import {fileURLToPath} from 'url'
 import path,{dirname} from 'path'
 import authRoutes from './routes/authRoutes.js'
 import todoRoutes from './routes/todoRoutes.js'
+import authMiddleware from './middleware/authMiddleware.js'
 
 const app = express()
 
@@ -22,7 +23,7 @@ app.get('/', (req, res) => {
 
 // Routes
 app.use('/auth',authRoutes)
-app.use('/todos',todoRoutes)
+app.use('/todos',authMiddleware,todoRoutes)
 
 //Server is Live
 app.listen(port,()=>{

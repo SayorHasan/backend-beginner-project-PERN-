@@ -7,7 +7,7 @@ const db  = new DatabaseSync(':memory:')
 db.exec(`
     CREATE TABLE users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        useranme TEXT UNIQUE,
+        username TEXT UNIQUE,
         password TEXT
     )
     `)
